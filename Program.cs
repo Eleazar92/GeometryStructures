@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 namespace GeometryStructures
 {
     public enum FigureType { Circle, Triangle, Rectangle, Polyangle };
-    internal struct Figure
+    public struct Figure
     {
         public FigureType Type;
         public Point Center;
@@ -39,7 +39,7 @@ namespace GeometryStructures
             {
                 try
                 {
-                    Console.WriteLine("Введите тип фигуры (0 = Круг, 1 = Теугольник, 2 = Прямоугольник, 3 = Многоугольник)");
+                    Console.WriteLine("Введите тип фигуры (0 = Круг, 1 = Треугольник, 2 = Прямоугольник, 3 = Многоугольник)");
                     type = (FigureType)int.Parse(Console.ReadLine() ?? "");
                     Console.WriteLine("Введите центр фигуры (x,y)");
                     var coords = (Console.ReadLine() ?? "").Split(',');
